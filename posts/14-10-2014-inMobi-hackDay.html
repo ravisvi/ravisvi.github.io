@@ -13,10 +13,10 @@
     <title>Taala in inMobi HackDay</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/clean-blog.min.css" rel="stylesheet">
+    <link href="../css/clean-blog.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -78,7 +78,7 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('img/nexus.jpg')">
+    <header class="intro-header" style="background-image: url('../img/inmobi.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -100,66 +100,62 @@
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                  <h3>Inception of the idea.</h3>
                  <p>
-                    My friend Praveen Chukka had got to know of the hack in the first place. He "asked me out" for the hack and I said yes. :'). We initially thought of an application which aided the memory by giving awesome patterns and nemonics to remember numbers and everything nice. </br>
+                    My friend Praveen Chukka had got to know of the hackathon in the first place. He asked me to join him and I said yes. :'). We initially thought of an application which aided the memory by giving awesome patterns and nemonics to remember numbers and everything nice. </br>
+                    <span class="caption text-muted" >( source : giphy.com )</span>
+                    <iframe class="center-block" src="http://giphy.com/embed/9JoZ3xXzJllQc?html5=true" width="240" height="240" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <br/>
                     But we soon realised that the impact this would create wouldn't be that great. </br>
                     So we sat there in the hackathon without an idea. Thinking of all the "impactful" billion dollar ideas which we could convert into a prototype within 18 hours. 
                     </br>
                     After thinking for a while, we came up with a simple idea. 
                     </br>
                     An extended child lock. For your friends. :P
-                    We all have appLockers. And they do provide all them good features, but they aren't one tap simple solution. Instead they make us ourselves unlock an app 40 to 50 times a day, when the sole purpose of the app was to prevent others from opening the sensitive data. 
+                    We all have appLockers. And they do provide all them good features, but they aren't the one tap simple solution. Instead they make us ourselves unlock an app 40 to 50 times a day, when the sole purpose of the app was to prevent others from opening the "sensitive" data. 
                  </p>
                  <h3>What it did</h3>
                  <p>
-                    I didn't know what to do. I pressed the power button. There came the google logo. And then again. And again. Aaaaand again. <br/>
-                    Kids. This phenomenon is called boot loop. At this point your phone may have got bricked.
+                    So basically it was a profile setter for your phone, if you had it you would set it to root mode, giving you all the access. But if you were giving to your friends, you would change it to the friends profile by one tap on your notification bar or any other custom profile which the app lets you create. 
                  </p>
                  <p>
-                    After googling it for possible solutions and listening to the advice of my awesome friends on facebook, I found that either my phone was bricked, for which I was to go to the recovery mode and do some changes or the power button was screwed up. 
+                    For each profile you can choose which all apllication to be blocked.
                  </p>
                  <h3>How we did it</h3>
                  <p>
-                    Now some quick background on my dear nexus. </br>
-                    It was bought in the states via play store. Hence warranty was not applicable here, in India, even though I was well within the warranty period.</br>
-                    Sending it to States would prove costly, but this was the last resort.
-                    The phone was rooted. Hence in the bootloader menu it showed that it was unlocked. <span class="text-muted" style="font-size:12px">-_- Why you little.</span>
+                    So we started by trying to understand how to get to know when an application is launched. This logically should be our starting point. Once we get to know what application is being launched we can block it if it's in the list. 
+                    <ul>How to get this information : 
+                        <li>Read logs.</li>
+                        <li>Broadcast Recievers</li>
+                    </ul>
+                    <br/>Reading locks was disabled from Jellybean.
+                     <span class="text-muted" style="font-size:12px">
+                         You Jelly?
+                     </span>
+                     <br/> Other apps don't get any broadcast when an app is started, so that's out of question.<br/>
+                     So we had to implement a listener which kept checking what activity was on top of stack. <br/>
+                     Then we used packageManager to get all details of this activity and checked it against the blocked list. If anything matched, we showed a blocked page. 
                  </p>
 
                  <h3>Final presentation round</h3>
                  <p>
-                    I tried going to the bootloader to clear the dalvik cache, just in case it was a soft brick. But in the menu, before I could go to the recovery mode, it used to automatically select (power button is used for selecting.) whatever was on the screen within a second. This lead me to the deduction, it must have been the faulty power button. <br/>Elementry, my dear Watson.
+                   
 
-                    
+                    Our final presentation was in front of an elite panel. This consisted of Ravi Gururaj, no introduction needed here, Mr Manu Jain, country head for Xiaomi, Mr Namit Jain, director at Nutanix, and inMobi head of products Krish. <br/>I feel that the panel was more into checking whether the hack we made was some disruptive business. <br/> This should be one way of looking at it but I think the more important thing was to see the hack. Not the business side of it. Only if you create products for fun which simplifies life without looking whether it will be the next facebook or google can you actually build something really disruptive. 
+                </br>Having said that, I feel our presentation wasn't that good either, we didn't make it clear how much and how well we had hacked. </br> All in all, it was a good day. Learnt so much and met amazing bunch of people. 
                     <span class="caption text-muted" >( source : giphy.com )</span>
-                    <iframe class="center-block" src="http://giphy.com/embed/yr6mgdF0b9arC?html5=true" width="500" height="281" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                    <iframe class="center-block" src="http://giphy.com/embed/xOamlzKgTQZSE?html5=true" width="480" height="269" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
-                    <br/> It's here where I decided to go to the LG service center. 
-                 </p> 
+                    <br/>                  </p> 
 
-                 <h3>Our beautiful v0.1 product demo</h3>  
+                 <h3>Our beautiful v0.01 product demo</h3>  
                  <p>
-                    So I found this big LG service center down a small road. This rekindled the lost spirit in me. I tried showing him the problem but before I could finish telling him everything, he cuts me and says, "Nothing I can do Saar. It's yemerican model. I can change the motherboard which will cost you 12 grand rupees. Or you send this there." I rebelled, "Listen to the problem, it might be a faulty power button". He was quite a rebel too, "Eh no man. My brother in law also had same problem, he also asked me to do something. I sent him off to U.S.A."
-                    </br>
-                    Now thoroughly confused whether to send my phone or myself to the states I went to a local shop who said he was busy day and night as his marriage was around the corner. I didn't even want all the detail.</br>
-                    I went to another LG <b>'do it yourself'</b> service center, who kept my phone for a week and returned it saying the same thing. "Motherboard gone Sir. Replace and give me 12k cash."
-                    <span class="caption text-muted" >( source : giphy.com )</span>
-                    <iframe class="center-block" src="http://giphy.com/embed/10EdqIfzllpg6A?html5=true" width="500" height="281" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                    <span class="caption text-muted" class="center-block">Exactly Ryan. Exactly.</span>
-                 </p>
+                        Following demo just shows how to set profiles. <br/>
+                        We are working on more features. Like one tap profile change from notification bar. <br/>
+                        Fixing lot of bugs. <br/>
+                        Stay tuned. <br/>
+                        </p>
+                        <iframe class="center-block" width="600" height="450" src="http://www.youtube.com/embed/Au_Y2x4AfEo" frameborder="0" allowfullscreen></iframe>
+                  
 
-                 <h3>The Temptation</h3>
-                 <p> This is where I feel a little guilty with myself. I for a second thought of paying 12k and not work more to solve a problem at hand. And when I realised it (changing the motherboard) only gave me 3 months warranty, I set my eyes on Moto X for a while. But then something happened. My Nexus 5 got jealous.</p>
 
-                <h3 id = "solution">Haaallelujah!</h3>
-                <p>
-                    Sitting in Krispy kreme, I was requested by my friends to demo my faulty nexus. So I got up to put on the stage act. Turning my phone away from me I switched it on. Counted till three and said "and now it restarts." <br/>Only it didn't.<br/>
-                    I had pressed the area behind the camera and the power button to hear a click previously. It was working somehow. 
-                    <br/><br/>
-                    I ran to the car, got my mac. Recovered important data, cleared dalvik cache, did a factory reset. Downloaded stock image and unrooted the phone. Updated it to 4.4.4. And now... it works fine. 
-                    <br/><br/>
-                    So the culprit? Mostly the faulty power button. Give your nexus a tight whack if it misbehaves and doesn't let you choose something from the bootloader menu. That should do. 
-                    Also add "Somebody gonna get a hurt real bad" to add some style and scare your phone into working.
-                </p>
                 </div>
             </div>
         </div>
