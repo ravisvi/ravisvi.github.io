@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <meta name="keywords" content="technology, blog, ravi, ideas, food" />
     
-    <title>Taala in inMobi HackDay</title>
+    <title>MTS2 at VMware</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -54,17 +54,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../index.html">Ravi Tejasvi</a>
+                <a class="navbar-brand" href="profile.html">Ravi Tejasvi</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="../index.html">Home</a>
+                        <a href="profile.html">Profile</a>
                     </li>
                     <li>
-                        <a href="../about.html">About</a>
+                        <a href="../blogs.html">Blogs</a>
                     </li>
                     <li>
                         <a href="../contact.html">Contact</a>
@@ -78,15 +78,14 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('../img/inmobi.jpg')">
+    <header class="intro-header" style="background-image: url('../img/vmw.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>Taala and InMobi HackDay 2014</h1>
-                        <h2 class="subheading">Office? Good. Hack? Good. Learning Experience? Brilliant.</h2>
-                        <span class="meta">Posted by <a href="#">Ravi Tejasvi</a> on October 14, 2014</span>
-                        <span class= "muted-text" style="font-size:11px;">Picture source: PravChuk's Lumia</span>
+                        <h1>My Work at VMware</h1>
+                        <h2 class="subheading">It's EPIC2!</h2>
+                        <span class= "muted-text" style="font-size:11px;">Picture source: https://www.glassdoor.co.in/Photos/VMware-Office-Photos-IMG415493.htm</span>
                     </div>
                 </div>
             </div>
@@ -98,64 +97,34 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                 <h3>Inception of the idea.</h3>
+                 <h3>Motivation to join Vmware</h3>
                  <p>
-                    My friend Praveen Chukka had got to know of the hackathon in the first place. He asked me to join him and I said yes. :'). We initially thought of an application which aided the memory by giving awesome patterns and nemonics to remember numbers and everything nice. </br>
-                    <span class="caption text-muted" >( source : giphy.com )</span>
-                    <iframe class="center-block" src="http://giphy.com/embed/9JoZ3xXzJllQc?html5=true" width="240" height="240" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <br/>
-                    But we soon realised that the impact this would create wouldn't be that great. </br>
-                    So we sat there in the hackathon without an idea. Thinking of all the "impactful" billion dollar ideas which we could convert into a prototype within 18 hours. 
-                    </br>
-                    After thinking for a while, we came up with a simple idea. 
-                    </br>
-                    An extended child lock. For your friends. :P
-                    We all have appLockers. And they do provide all them good features, but they aren't the one tap simple solution. Instead they make us ourselves unlock an app 40 to 50 times a day, when the sole purpose of the app was to prevent others from opening the "sensitive" data. 
+                    As I'm interested in building infrastructure that can rapidly analyse big data, VMware, an industry leader in virtual infrastrucure, was the natural choice. I got offered a role of MTS in the Storage Management team.
                  </p>
-                 <h3>What it did</h3>
+                 <h3>Daily work</h3>
                  <p>
-                    So basically it was a profile setter for your phone, if you had it you would set it to root mode, giving you all the access. But if you were giving to your friends, you would change it to the friends profile by one tap on your notification bar or any other custom profile which the app lets you create. 
+                    I was part of designing and implementing VMware neXt generation VASA Provider (xVP) frontend. <br/>
+                    Main goal of xVP is create performant and scalable VP implementation to reduce VMware's dependency on partner implementations.<br/>
+                    <br/>
+
+                    Have implemented powercli commandlets for vSAN apis. Owing to huge demand in the market for VMware's powercli commandlets, we provided crucial and time saving vSAN commandlets for the 2016 release.<br/>
+
+                    I also strive to drive innovation, by analyzing competitors, keeping a watch on the software trends related to storage and generate impactful ideas which can be turned into viable products/ features.<br/>
+
+                    I also take part in performing code reviews and fixing product bugs.
+
                  </p>
+                 <h3>Innovation</h3>
                  <p>
-                    For each profile you can choose which all apllication to be blocked.
+                    My team and I have demostrated a solution that decentralizes storage policy based management service from vCenter and converts it to a distributed service running on every ESXi host. </br> 
+                    With this solution, each distributed host had copies of storage policies. Hence policies were no longer lost when vCenter was backed up. This also decreased the number of calls to the vCenter by 40% from each host hence improving the performance of the service.
+                    </p>
+                  <p>
+                  Carrying VMware’s experience on cloud infrastructure, I’ve disclosed an invention about "Early Risk Detection System", bearing internal docket number D444.ID. 
+                  </br>
+                  I’m also involved in VMware’s innovation series, Research and Development Innovation Offsite (RADIO). As part of this, I'm currently writing 2 research papers. One, focusing on improving performance and efficiency of distributed systems running VMware’s services on ESXi hosts by introducing a service which manages, load balances and schedules other services on the hosts; other, on predicting failures in a virtual infrastructure by analyzing the system logs. I have also collaborated and worked on container technologies and photon platform, trying to investigate container based distributed systems. For my efforts at VMware, I was one of the quickest to be promoted to MTS 2.
+
                  </p>
-                 <h3>How we did it</h3>
-                 <p>
-                    So we started by trying to understand how to get to know when an application is launched. This logically should be our starting point. Once we get to know what application is being launched we can block it if it's in the list. 
-                    <ul>How to get this information : 
-                        <li>Read logs.</li>
-                        <li>Broadcast Recievers</li>
-                    </ul>
-                    <br/>Reading locks was disabled from Jellybean.
-                     <span class="text-muted" style="font-size:12px">
-                         You Jelly?
-                     </span>
-                     <br/> Other apps don't get any broadcast when an app is started, so that's out of question.<br/>
-                     So we had to implement a listener which kept checking what activity was on top of stack. <br/>
-                     Then we used packageManager to get all details of this activity and checked it against the blocked list. If anything matched, we showed a blocked page. 
-                 </p>
-
-                 <h3>Final presentation round</h3>
-                 <p>
-                   
-
-                    Our final presentation was in front of an elite panel. This consisted of Ravi Gururaj, no introduction needed here, Mr Manu Jain, country head for Xiaomi, Mr Namit Jain, director at Nutanix, and inMobi head of products Krish. <br/>I feel that the panel was more into checking whether the hack we made was some disruptive business. <br/> This should be one way of looking at it but I think the more important thing was to see the hack. Not the business side of it. Only if you create products for fun which simplifies life without looking whether it will be the next facebook or google can you actually build something really disruptive. 
-                </br>Having said that, I feel our presentation wasn't that good either, we didn't make it clear how much and how well we had hacked. </br> All in all, it was a good day. Learnt so much and met amazing bunch of people. 
-                    <span class="caption text-muted" >( source : giphy.com )</span>
-                    <iframe class="center-block" src="http://giphy.com/embed/xOamlzKgTQZSE?html5=true" width="480" height="269" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-
-                    <br/>                  </p> 
-
-                 <h3>Our beautiful v0.01 product demo</h3>  
-                 <p>
-                        Following demo just shows how to set profiles. <br/>
-                        We are working on more features. Like one tap profile change from notification bar. <br/>
-                        Fixing lot of bugs. <br/>
-                        Stay tuned. <br/>
-                        </p>
-                        <iframe class="center-block" width="600" height="450" src="http://www.youtube.com/embed/Au_Y2x4AfEo" frameborder="0" allowfullscreen></iframe>
-                  
-
-
                 </div>
             </div>
         </div>
