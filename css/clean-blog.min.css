@@ -16,6 +16,7 @@ body{font-family:Lora,'Times New Roman',serif;font-size:20px;color:#404040}p{lin
 @media only screen and (min-width:768px){
   .post-preview>a>.post-title{font-size:20px}
   .post-preview>a>.post-subtitle{font-size:20px;}
+  .post-preview>img{clear:both;}
 }
 
 
