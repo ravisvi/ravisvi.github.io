@@ -17,8 +17,8 @@ body{font-family:Lora,'Times New Roman',serif;font-size:20px;color:#404040}p{lin
   .post-preview>a>.post-title{font-size:36px}
 }
 @media only screen and (max-width:768px){
-  .post-preview>a>.post-title{font-size:20px}
-  .post-preview>a>.post-subtitle{font-size:20px;}
+  .post-preview>a>.post-title{font-size:2px}
+  .post-preview>a>.post-subtitle{font-size:2px;}
   .post-preview>img{float:none;clear:both;}
 }
 
