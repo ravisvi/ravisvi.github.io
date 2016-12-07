@@ -13,9 +13,7 @@ body{font-family:Lora,'Times New Roman',serif;font-size:20px;color:#404040}p{lin
 .post-preview>.post-meta{color:gray;font-size:18px;font-style:italic;margin-top:0}
 .post-preview>.post-meta>a{text-decoration:none;color:#404040}
 .post-preview>.post-meta>a:hover,.post-preview>.post-meta>a:focus{color:#0085a1;text-decoration:underline}
-@media only screen and (min-width:768px){
-  .post-preview>a>.post-title{font-size:36px}
-}
+
 @media only screen and (max-width:768px){
   .post-preview>a>.post-title{font-size:2px}
   .post-preview>a>.post-subtitle{font-size:2px;}
