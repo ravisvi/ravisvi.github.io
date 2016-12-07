@@ -18,11 +18,12 @@ body{font-family:Lora,'Times New Roman',serif;font-size:20px;color:#404040}p{lin
   .post-preview> a > .post-title {
     font-size: 36px;
   }
+}
 
 @media only screen and (max-width:768px){
-  .post-preview>a>.post-title {font-size:20px !important;}
-  .post-preview>a>.post-subtitle {font-size:20px !important; }
-  .post-preview>img {clear:both;} 
+  .post-preview>img {float:none !important; clear:both;} 
+  .post-preview-disabled>img {float:none !important; clear:both;}
+  .list-inline {float:none !important; clear:both;}
 }
 
 
