@@ -102,12 +102,15 @@
 
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-preview">
-                    <a href="profile/files/TejasviRavi.pdf" target="blank">
+                    <a href="profile/files/TejasviRavi.pdf" target="blank" style="float:left">
                         <h2 class="post-title">
                             Curriculum Vitae
                         </h2>
+                        <h3 class="post-subtitle">
+                            CV will open in a new tab.
+                        </h3>
                     </a>
-                    <ul class="list-inline">
+                    <ul class="list-inline" style="float:right;margin-top:2%;">
                     <li>
                         <a href="https://www.linkedin.com/in/ravisvi" target="blank">
                             <span class="fa-stack fa-lg">
@@ -127,20 +130,24 @@
                     </li>
                 </ul>
                 </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="profile/vmw.html">
-                        <h2 class="post-title">
-                            Member of Technical Staff 2
-                        </h2>
-                        <h3 class="post-subtitle">
-                        VMware RnD
-                        </h3>
+                <hr style="clear:both;">
+                <div class="post-preview" style="margin-top: -5%;">
+                    <a href="profile/vmw.html" style="float:left">
+                                <h2 class="post-title">
+                                    Member of Technical Staff 2
+                                </h2>
+                                <h3 class="post-subtitle">
+                                    VMware RnD
+                                </h3>
                     </a>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="profile/greenplum.html">
+                    <img class="img-responsive" src="img/vmw-logo.png" style="width:13%;height:13%;float:right;margin-top:3%;">
+                    <p style="clear:both;">
+                       I currently work here, click above to know more.
+                    </p>
+                </div>                
+                <hr style="clear:both;">
+                <div class="post-preview" style="margin-top: -5%;">
+                    <a href="profile/greenplum.html" style="float:left">
                         <h2 class="post-title">
                             QoS on GreenPlum
                         </h2>
@@ -148,10 +155,32 @@
                         Final thesis project
                         </h3>
                     </a>
+                    <img class="img-responsive" src="img/greenplum-logo.png" style="width:11%;height:11%;float:right;margin-top:2%;">
+                    <p style="clear:both;">
+                       My final year thesis project, also called the capstone project. Click above for more details.
+                    </p>
                 </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="profile/gsoc.html">
+
+                <hr style="clear:both;">
+                <div class="post-preview-disabled" style="margin-top: -2%;">
+                    <a style="float:left;">
+                        <h2 class="post-title">
+                            Intern
+                        </h2>
+                        <h3 class="post-subtitle">
+                            Juniper Networks
+                        </h3>
+                    </a>
+                    <img class="img-responsive" src="img/juniper.png" style="width:17%;height:17%;float:right;margin-top:5%;">
+                    <p style="clear:both;">
+                        Built a native android approvals app for internal usage. This app was primarily to be used for all approvals related tasks, including Salary change and PTO applications.<br/>
+                        Also built a prototype for connecting issues and their knowledge base article via the use of TitanDB, a graph database. Using TitanDB, speed of search was improved.
+                    </p>
+                </div>
+
+                <hr style="clear:both;">
+                <div class="post-preview-disabled" style="margin-top: -5%;">
+                    <a style="float:left;">
                         <h2 class="post-title">
                             Google Summer of Code
                         </h2>
@@ -159,6 +188,45 @@
                             Tahrir Project
                         </h3>
                     </a>
+                    <img class="img-responsive" src="img/gsoc.png" style="width:13%;height:13%;float:right;margin-top:3%;">
+                    <p style="clear:both;">
+                        I worked on Tahrir project, which aims to be a distributed, decentralized, scalable, and anonymous "workalike" for services like Twitter, Google Plus, and Facebook. </br>
+                        I developed both the frontend and backend implementations for microblogs, user profiles and communication between users.</br>
+                        Find the Source Code <a href= "https://github.com/sanity/tahrir" target= blank>here</a>. 
+                     </p>
+                </div>
+
+                <hr style="clear:both;">
+                <div class="post-preview-disabled" style="margin-top: -5%;">
+                    <a style="float:left;">
+                        <h2 class="post-title">
+                            Customer Service Bot
+                        </h2>
+                        <h3 class="post-subtitle">
+                            As part of NLP elective
+                        </h3>
+                    </a>
+                    <img class="img-responsive" src="img/pes-logo.jpeg" style="width:25%;height:25%;float:right;margin-top:3%;">
+                    <p style="clear:both;">
+                        Built Customer Service Representative Bot which could accept and answer various English queries ranging from price of a particular model to feature comparison between two devices. This was done on a corpus generated by the students of PESIT. <br/>
+                        We Peformed Named Entity Recognition on input sentences, Relationship Extraction using Machine Learning on obtained named entities and used Natural Language Generation to generate responses for the bot.
+                     </p>
+                </div>
+                <hr style="clear:both;">
+                <div class="post-preview-disabled" style="margin-top: -5%;">
+                    <a style="float:left;">
+                        <h2 class="post-title">
+                            Location Prediction
+                        </h2>
+                        <h3 class="post-subtitle">
+                            Center for Cloud and Big Data Lab, PESIT
+                        </h3>
+                    </a>
+                    <img class="img-responsive" src="img/ccbd-logo.png" style="width:20%;height:20%;float:right;margin-top:3%;">
+                    <p style="clear:both;">
+                        Here I worked on a research project which aimed at predicting location of a user by using just the data which was available on the user's phone. We were provided with a huge corpus of data by Nokia. <br/>
+                        We experimented with Hidden Markov Model and trained the system to understand patterns in usage of applications to guess a context. We then analyzed and formulated a way in which we could use this data to predict the next location for the user. This information was then to be used to serve context based advertisements.
+                     </p>
                 </div>
                 <!--
                 <hr>
@@ -174,22 +242,13 @@
                     </a>
                 </div>
                 <hr>
-                <div class="post-preview">
-                    <a href="customerBot.html">
-                        <h2 class="post-title">
-                            Customer Service Representative Bot 
-                        </h2>
-                        <h3 class="post-subtitle">
-                            As part of Natural Language Processing elective
-                        </h3>
-                    </a>
-                </div>
+                
                 -->
             </div>
         </div>
     </div>
 
-    <hr>
+    <hr style="clear:both;">
 
     <!-- Footer -->
     <footer>
