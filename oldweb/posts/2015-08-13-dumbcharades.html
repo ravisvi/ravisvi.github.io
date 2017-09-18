@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Daily.. no weekly.. yearly blog of Shri Shri Shri Ravisvi">
+    <meta name="author" content="">
+    <meta name="keywords" content="technology, blog, ravi, ideas, food" />
+    
+    <title>Dumb Charades Movie Generator</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/clean-blog-alt.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55731229-1', 'auto');
+  ga('send', 'pageview');
+
+    </script>
+    <script>
+      //The random movie generator. 
+      var hindi_arr = ["Hello! Hum Lallan Bol Rahe Hain","Manorama Six Feet Under","Saas Bahu Aur Sensex","Via Darjeeling","Lal Dupatta Malmal Ka","Waaris","Don Muthu Swami","Rehguzar","Madhoshi","Majhdhaar","Zubeidaa","Fun2shh: Dudes in the 10th Century","Shagird","Ijaazat","Eight Shani","Gaman","Noorie","Sagina","Anugraham","Drohkaal","Keemat – They Are Back","Zulm-O-Sitam","Ganga Jamuna Ki Lalkaar","Bhediyon Ka Samooh","Luv Shuv Tey Chicken Khurana","Baiju Bawra","Amrapali","Gaja Gamini","Albert Pinto Ko Gussa Kyoon Aata Hai","Andheri Raat Mein Diya Tere Haath Mein","Mohan Joshi Hazir Ho!","Salim Langde Pe Mat Ro","Paap Ko Jalaa Kar Raakh Kar Doonga","Tadipaar","Boond Jo Ban Gayee Moti","36 Chowringhee Lane","Dr. Kotnis Ki Amar Kahani"]
+      var eng_arr = ["Ace Ventura","ALIEN","Abraham Lincoln vs. Zombies","Abraham Lincoln: Vampire Hunter","All the President's Men","Amelie","American Beauty","American Psycho","Angels and Demons","Apple Dumpling Gang","Avatar","Cat on a hot tin roof","Cloverfield","Commando","Dark Victory","Day After Tomorrow","Day of the Dead","Days of Thunder","Death Race","Death Race","Deja vu","Deliverance","Demons","desperado","Dog Day Afternoon","Dog Day Afternoon","Donnie Darko","Don't Tell Mom the Babysitter's Dead","Dr. Dolittle","Dumb & Dumber","Earth","Earth","Earth","East of Eden","East of Eden","Easy A","Easy A","EASY A","Easy Rider","Eat Pray Love","Ed Wood","Educating Rita","Ender's Game","Enemy of the state","Enter the Dragon","Epic","Equilibrium","Equilibrium","Eragon","Erin Brockovich","Erin Brokovich","Esther","ET","Eulogy","Event Horizon","Ever After","Evil Dead","Exorcist: The Beginning","Face off","Frankenstein","Gaslight","Ghost","Gone with the Wind","Good Fellas","Gulliver's Travels","Halloween","Hannah Montana the movie","Harold & Kumar Escape from Guantanamo Bay","Harriet the Spy","Harry Potter","Harry Potter and the deathly hallows","Hary Potter: Prisoner of Azkaban","High Fidelity","Horton hears a Who","House of 1,000 Corpses","House of Wax","IT","Kicking & Screaming","Kill Bill","Labyrinth","Ladder 49","Land Before Time","Land of the Dead","Lara Croft: Tomb Raider","Last House on the Left","Laurel and Hardy Great Guns","Like Mike","LION KING","Little Fockers","Love Actually","Love Actually","Madagascar","Mr. Bean's Holiday","Mrs. Doubtfire","Nacho Libre","Nacho Libre","Nailbiter","Nancy Drew","NANNY MCPHEE","Narc","National Security","National Treasure","National Velvet","Natural Born Killers","Need for Speed","Nell","Nerds","Neuromancer","Next","Night at the Mueseum","Night at the Mueseum","Night of the Hunter","Night of the Living Dead","Nightmare before christmas","No Country For Old Men","No Retreat No Surrender","No Way Out","Noah","Noah's Ark","Nobody's Fool","North by Northwest","Nostradamus","Not Another Teen Movie","Notting Hill","Nutty Professor","Oblivion","Oliver","Oliver Twist...","Omen","Omen","Orange County","Over the top","Pan's Labyrinth","Predator","Pygmalion","Raging Bull","Raisin in the Sun","Raising Arizona","Raising Arizona","Ran","Rapunzel","Ratatouille","Real Steel","Reality Bites","Rebel without a cause","Redline","Remains of the Day","Reservoir Dogs","Resident Evil","Return to the 36th Chamber","Revamped","Rio","Road House","Roadwarrior","Robocop","Rocky I, II, and III","S.W.A.T","Sabretooth","Salt","Salton Sea","Saw","Scarface","Serving Sara","Seven Pounds","Seven Pounds","Seven Samurai","Silent Hill","Six Guns","Sixteen candles","Snatch","Snatch","Social Network","Solo","Something Wicked This Way Comes","Sounder","Spirited Away","Star Trek II: The Wrath of Khan","Star Wars","Stealing Beauty","Superbad","Swordfish","Taken","Terminator","The Incredibles","The secret life of Walter Mitty","The Texas Chainsaw Massacre","The Truman Show","The Wild Bunch","The Year of Living Dangerously","Thelma & Louise","Timecop","Tinker Bell","Titanic","Top Gun","Total Recall","Under the Tuscan Sun","Waiting","War of the Worlds","Watchers","Waterworld","What Women Want","X-men the last stand","Year of the Dog","Yellow","yellowbrickroad","Yellowbrickroad","Yes Man","Yes Man","Yes Man","Yes Man","Yesterday","Yesterday Was a Lie","You Again","You dont mess with the Zohan","You Got Served","You, me and Dupree","Young Guns","Yours, Mine, and Ours"];
+      var hindi_arr_session = hindi_arr;
+      var eng_arr_session = eng_arr;
+      console.log(eng_arr_session.length)
+      console.log(hindi_arr_session.length)
+      function toggle(){
+          var res = document.getElementById("result");
+          var hide_btn = document.getElementById("hide");
+          if(res.style.display=='block'){
+            res.style.display='none';
+            hide_btn.innerHTML="Show Movie Name";
+          }
+          else{
+            res.style.display='block';
+            hide_btn.innerHTML="Hide Movie Name"
+          }
+          
+      }
+      function gen(type){
+        if(type=="hindi"){
+
+          var ind = Math.floor(Math.random()*hindi_arr_session.length);
+          var res = document.getElementById("result");
+          res.innerHTML = "<p>"+hindi_arr_session[ind]+"</p>";
+          res.style.display='block';
+          hindi_arr_session.splice(ind,1);
+          document.getElementById("hide").style.display='block';
+
+   
+        }
+        else{
+
+          var ind = Math.floor(Math.random()*eng_arr_session.length);
+          var res = document.getElementById("result");
+          res.innerHTML = "<p>"+eng_arr_session[ind]+"</p>";
+          res.style.display='block';
+          eng_arr_session.splice(ind, 1);
+          document.getElementById("hide").style.display='block';
+        }
+      }
+
+      function clr(){
+        eng_arr_session = eng_arr;
+        hindi_arr_session = hindi_arr;
+        console.log("Got hit.")
+        var res = document.getElementById("result");
+        console.log(res.innerHTML)
+        res.innerHTML = "<p>Glorious movie name shall fabulously appear here</p>";
+        console.log(res.innerHTML)
+        document.getElementById("hide").style.display='none';
+      } 
+
+    </script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">Ravi Tejasvi</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="../index.html">Profile</a>
+                    </li>
+                    <li>
+                        <a href="../blogs.html">Blogs</a>
+                    </li>
+                    <li>
+                        <a href="../contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-color: black">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div style="color:white">
+                        <h3>Dumb Charades Movie Generator</h3>
+                        
+                        <span class= "muted-text" style="font-size:11px;">This is black colored background. #kthnxbye</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    
+        <div class="container">
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                 <h3 style="text-align:center;"> Press buttons. Thanks.</h3>
+                 
+                  <div id="result" class="well" style="text-align:center;">
+                    <p>Movie name shall fabulously appear here</p>
+                  </div>
+                  <div style="text-align:center;">
+                    <button type="button" class="btn btn-primary" onclick="gen('hindi')">Hindi!</button>
+                    <button type="button" class="btn btn-success" onclick="gen('eng')" >English!</button>
+                  </div>
+                  <div style="text-align:center;">
+                    <button type="button" id="hide" style="display:none;margin-top:20px;margin-left:39.7%;" class="btn btn-info" onclick="toggle()">Hide Movie Name</button>
+                    
+                    <button type="button" class="btn btn-danger btn-xs" style="margin-top:10px"onclick="clr()">Start fresh session!</button>
+                </div>
+                </div>
+            
+        </div>
+
+
+    <hr>
+
+    <div id="disqus_thread" class = "container"></div>
+       <script type="text/javascript">
+           /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+           var disqus_shortname = 'ravisvi'; // required: replace example with your forum shortname
+
+           /* * * DON'T EDIT BELOW THIS LINE * * */
+           (function() {
+               var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+               dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+           })();
+       </script>
+       <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+       <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="https://twitter.com/ravisvi">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/ravisvi">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/ravisvi">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <p class="copyright text-muted">Copyleft</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- jQuery -->
+    <script src="../js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../js/clean-blog.min.js"></script>
+
+
+       
+</body>
+
+</html>
